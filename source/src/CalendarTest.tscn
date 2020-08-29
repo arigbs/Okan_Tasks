@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/calendar_button/calendar_script.gd" type="Script" id=1]
+[ext_resource path="res://addons/calendar_button/btn_img/btn_32x32_04.png" type="Texture" id=2]
+[ext_resource path="res://addons/calendar_button/btn_img/btn_32x32_03.png" type="Texture" id=3]
+[ext_resource path="res://src/CalendarTest.gd" type="Script" id=4]
+
+[node name="Node2D" type="Control"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CalendarButton" type="TextureButton" parent="CanvasLayer"]
+margin_right = 32.0
+margin_bottom = 32.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="date_selected" from="CanvasLayer/CalendarButton" to="." method="_on_CalendarButton_date_selected"]

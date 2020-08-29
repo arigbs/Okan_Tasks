@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[resource]
+Button/styles/ = SubResource( 1 )
+Label/colors/ = Color( 0.980392, 0.980392, 0.980392, 1 )
+Label/constants/ = 0
+Label/fonts/ = null
+Label/icons/ = null
+Label/styles/ = null
